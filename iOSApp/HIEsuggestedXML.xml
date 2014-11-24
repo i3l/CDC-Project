@@ -1,0 +1,733 @@
+<document>
+	<algorithm name = "VT version 5">
+		<node>
+			<name>
+				Start Node
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Select One:
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						DVT
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						PE
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				DVT
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Consider conducting baseline tests such Creatinine, PT, PTT, and possibly Bilirubin (AST/LT) to determine patient's condition.
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						DVTChooser
+					</childName>
+					<type>
+						step
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				DVTChooser
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				After baseline testing complete choose one option that best describes the patient's condition? (Choose one)
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						Proximal DVT, Severely Symptomatic Distal DVT, Moderately Symptomatic Distal DVT
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Mildly Symptomatic DVT, Asymptomatic Distal DVT
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Proximal DVT, Severely Symptomatic Distal DVT, Moderately Symptomatic Distal DVT
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Is there arterial compromise (phlegmasia albicans)?
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						Massive Dvt
+					</childName>
+					<type>
+						No
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Thromobolytic Therapy
+					</childName>
+					<type>
+						yes
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Massive DVT
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Does the patient have a massive DVT?
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						No thromobolytic therapy
+					</childName>
+					<type>
+						no
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Patient Bleed Risk
+					</childName>
+					<type>
+						yes
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				No thromobolytic therapy
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				No thromobolytic therapy suggested. Continue for anticoagulation information
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Patient Bleed Risk
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Is the patient's bleeding risk high or low?
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						No thromobolytic therapy
+					</childName>
+					<type>
+						high
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Thromobolytic Therapy
+					</childName>
+					<type>
+						low
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Thromobolytic Therapy
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Consider thromobolytic therapy. Continue for anticoagulation information.
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						Anticoagulation therapy
+					</childName>
+					<type>
+						step
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+			
+		<node>
+			<name>
+				Anticoagulation therapy
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Is anticoagulation therapy safe for the patient?
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						IVD
+					</childName>
+					<type>
+						no
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						GFR
+					</childName>
+					<type>
+						yes
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+			
+		<node>
+			<name>
+				IVC Filter
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Consider IVC Filter if the patient requires anticoagulation.
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+			
+		<node>
+			<name>
+				Mildly Symptomatic DVT, Asymptomatic Distal DVT
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				No thrombolytic treatment suggested. Suggest a sequential Doppler ultrasound to determine if any blockages exist. Continue for anticoagulation information
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						No thromobolytic therap
+					</childName>
+					<type>
+						step
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+			
+		<node>
+			<name>
+				PE
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Consider conducting baseline tests such as Creatinine, PT, PTT, and possibly Bilirubin(AST/LT) to determine patient's condition
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						Hemodynamically stable
+					</childName>
+					<type>
+						step
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+			
+		<node>
+			<name>
+				Hemodynamically stable
+			</name>
+			<ccdNodeName>
+				null
+			</ccdNodeName>
+			<text>
+				Is the patient hemodynamically stable?
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						ECGTnt
+					</childName>
+					<type>
+						No
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Anticoagulation therapy
+					</childName>
+					<type>
+						Yes
+					</type>
+				</childNode> 
+			</childNodes>
+		</node>
+			
+		<node>
+			<name>
+				ECGTnt
+			</name>
+			<type>
+				Null
+			</type>
+			<text>
+				Consider ECG and TnT to assess for myocardial damage
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						Patient Bleed Risk
+					</childName>
+					<type>
+						step
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+			
+		<node>
+			<name>
+				GFR
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Is the patient's GFR at least 30 mL/min?
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						Choose anticoaguleant1
+					</childName>
+					<type>
+						yes
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Choose anticoagulant2
+					</childName>
+					<type>
+						no
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+			
+		<node>
+			<name>
+				Choose anticoagulant1
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Choose an anticoagulant
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						Intravenous Unfractionated Heparin with Warfarin
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Subcutaneous Unfractionated Heparin with Warfarin
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Low Molecular Weight Heparin - Dalteparin
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Low Molecular Weight Heparin - Tinzaparin
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Apixaban
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Dabigatran
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Edoxaban
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Rivaroxaban
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Fondaparinux
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Intravenous Unfractionated Heparin with Warfarin
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Intravenous Unfractionated Heparin with Warfarin:
+					- Consider administering intravenously following your institution specific protocol.
+					- Monitor anticoagulation with the PTT or anti factor Xa test using standard heparin dosing algorithm.
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Subcutaneous Unfractionated Heparin with Warfarin
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Subcutaneous Unfractionated Heparin with Wargarin:
+					- Consider administering subcutaneously an initial dose of 333 units/kg followed by 250 units/kg twice daily
+					- No monitoring necessary
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Low Molecular Weight Heparin - Enoxaparin
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Low Molecular Weight Heparin - Enoxaparin:
+					- Consider administering 1mg/kg of enoxaparin once daily, subcutaneously
+					- No routine monitoring required but consider for neonates, those with poor renal function, and those with body weight of less the 45kg or greater then 100kg
+					- Monitor anticoagulation with the anti factor Xa test
+					- Sample for monitoring must be collected 4 hours after injection for anti-factor Xa test
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Low Molecular Weight Heparin - Dalteparin
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Low Molecular Weight Heparin - Dalteparin:
+					- Consider administering 200 units/kg of dalteparin once daily, subcutaneously
+					- No routine monitoring required but consider for neonates, those with poor renal function, and those with body weight of less then 45kg or greater then 100kg
+					- Monitor anticoagulation with the anti factor Xa test
+					-Sample for monitoring must be collected 4 hours after injection for anti-factor Xa test
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Low Molecular Weight Heparin - Tinzaparin
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Low Molecular Weight Heparin - Tinzaparin:
+					- Consider administering 156 units/kg of dalteparin once daily, subcutaneously
+					- No routine monitoring required but consider for neonates, those with poor renal function, and those with body weight of less then 45kg or greater then 100kg
+					- Monitor anticoagulation with the anti factor Xa test
+					-Sample for monitoring must be collected 4 hours after injection for anti-factor Xa test
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Apixaban
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Apixaban:
+					- Consider initiating apixaban at 10mg twice daily for 1 week, ten 5mg twice daily
+					- No routine laboratory monitoring required but consider monitoring renal function if clinically indicated
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Dabigatran
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Dabigatran:
+					- Use LMWH, UFH, or Fondaparinux as monotherapy for 3 days before starting dabigatran
+					- If using LMWH, no monitoring required but consider for neonatesm those with poor renal function, and those with body weight of less then 45kg or granders then 100 kg.
+					- Monitor anticoagulation with the anti factor Xa test
+					-Sample for monitoring must be collected 4 hours after injection for anti-factor Xa test
+					- If using UFH, monitor with the PTT or the anti-Xa using standard heparin dosing algorithm
+					- If using Fondaparinux, no monitoring required but consider monitoring renal function if clinically indicated
+					- After monotherapy consider initiating dabigatran at 150 mg twice daily
+					- This is the FDS approved dose for GFR greater then 30 mL/min
+					- No routine laboratory monitoring required but consider monitoring renal function if clinically indicated
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Edoxaban
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Edoxaban:
+					- Use LMWH, UFH, or Fondaparinux as monotherapy for 3 days before starting edoxaban
+					- If using LMWH, no monitoring required but consider for neonatesm those with poor renal function, and those with body weight of less then 45kg or granders then 100 kg.
+					- Monitor anticoagulation with the anti factor Xa test
+					-Sample for monitoring must be collected 4 hours after injection for anti-factor Xa test
+					- If using UFH, monitor with the PTT or the anti-Xa using standard heparin dosing algorithm
+					- If using Fondaparinux, no monitoring required but consider monitoring renal function if clinically indicated
+					- After monotherapy consider initiating edoxaban at (need FDA insert for information)
+					- No routine laboratory monitoring required but consider monitoring renal function if clinically indicated
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>	
+		
+		<node>
+			<name>
+				Rivaroxaban
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Rivaroxaban:
+					- Consider initiating rivaroxaban at 15mg daily for the first 3 weeks, then, 20mg daily
+					- No routine laboratory monitoring required but consider monitoring renal function if  clinically indicated
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Fondaparinux
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Fondaparinux:
+					- Consider administering by body weight: 5mg if less then 60kg, 7.5 mg if 60-100kh, and 10mg if greater the 100kg once daily, subcutaneously
+					- No routine laboratory monitoring required but consider monitoring renal function if clinically indicated
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node name = "Choose anticoagulant2" CCDNodeName = "Null">
+			<name>
+				Choose anticoagulant2
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Choose an anticoagulant
+			</text>
+			<childNodes>
+				<childNode>
+					<childName>
+						Intravenous Unfractionated Heparin with Warfarin
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Subcutaneous Unfractionated Heparin with Warfarin
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+				<childNode>
+					<childName>
+						Low Molecular Weight Heparin with Warfarin
+					</childName>
+					<type>
+						nameDecision
+					</type>
+				</childNode>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Intravenous Unfractionated Heparin with Warfarin
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Intravenous Unfractionated Heparin with Warfarin:
+					- Consider administering intravenously following your institution specific protocol.
+					- Monitor anticoagulation with the PTT or anti factor Xa test using standard heparin dosing algorithm.
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Subcutaneous Unfractionated Heparin with Warfarin
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Subcutaneous Unfractionated Heparin with Wargarin:
+					- Consider administering subcutaneously an initial dose of 333 units/kg followed by 250 units/kg twice daily
+					- No monitoring necessary
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+		
+		<node>
+			<name>
+				Low Molecular Weight Heparin with Warfarin
+			</name>
+			<ccdNodeName>
+				Null
+			</ccdNodeName>
+			<text>
+				Low Molecular Weight Heparin with Warfarin:
+					- Consider administering 1mg/kg weight once a day, subcutaneously
+					- Monitor anticoagulation with the anti factor Xa test to target of 0.5 to 1.0
+					- Sample for monitoring must be collected 4 hours after injection for anti-factor Xa test.
+			</text>
+			<childNodes>
+			</childNodes>
+		</node>
+	</algorithm>
+</document>
